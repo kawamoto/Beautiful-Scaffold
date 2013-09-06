@@ -6,11 +6,11 @@ class BeautifulDevisecancanGenerator < Rails::Generators::Base
   source_root File.expand_path('../templates', __FILE__)
 
   argument :model, :type => :string, :desc => "Name of model (downcase singular)"
-  
+
   def install_devise
     view_path = "app/views/"
 
-    gem("devise", "2.1.0")
+    gem("devise")
 
     inside Rails.root do
       run "bundle install"
